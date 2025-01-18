@@ -94,12 +94,3 @@ async def process_help_command(message: Message):
     for command in settings.list_commands:
         string_commands += f'{command} - {settings.list_commands[command]}\n'
     await message.answer(f'Список комманд:\n{string_commands}')
-
-
-# @router.message(F.text)
-# async def process_unhandled_message(message: Message):
-#     """
-#     Функция обработки сообщений, которые бот не умеет обрабатывать
-#     """
-#     await message.answer('Извините, я не умею работать с этим текстом. '
-#                          'Пожалуйста, используйте команды или выберите действие из меню.')
